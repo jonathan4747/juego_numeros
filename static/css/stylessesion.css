@@ -1,0 +1,41 @@
+body{
+    text-align: center;
+}
+
+.cuerpo{
+    display: flex;
+    justify-content: center;
+}
+
+.cuadro{
+    width: 300px;
+    border:  solid gray ;
+    color:yellow;
+    background-color: gray;
+}
+
+button{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: yellow;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+}
+.respuesta{
+    background-color: red;
+    width: 400px;
+    color:yellow
+}
+.marcador{
+    display: flex;
+    justify-content: center;
+}
+.numero{
+    width: 300px;
+    border: solid green;
+    background-color: green;
+    color: yellow
+}

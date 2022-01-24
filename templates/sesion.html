@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/stylessesion.css')}}"/>
+        <title> Dashboard </title>
+    </head>
+    <body>
+        <h1>
+            Welcome to the Great Number Game
+        </h1>
+        <h2>
+            I am thinking of a number between 1 and 100
+        </h2>
+        {% if  valor == "mayor"%} 
+            <div class='titulo'>
+                <div class='respuesta'>
+                    <h2>
+                        Mi numero es menor
+                    </h2>
+                </div>
+            </div>
+            <div class='cuerpo'>
+                <div class = 'cuadro'>
+                    <h2>
+                        Take a guess!
+                    </h2>
+                    <form action="/num" method="POST" >
+                        <div>
+                            <input type="text" id="num_seleccionado" name="num_seleccionado">
+                        </div>
+                        <button type="submit">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        {% endif %}
+        {% if  valor == "menor"%} 
+            <div class='titulo'>
+                <div class='respuesta'>
+                    <h2>
+                        Mi numero es mayor
+                    </h2>
+                </div>
+            </div>
+            <div class='cuerpo'>
+                <div class = 'cuadro'>
+                    <h2>
+                        Take a guess!
+                    </h2>
+                    <form action="/num" method="POST" >
+                        <div>
+                            <input type="text" id="num_seleccionado" name="num_seleccionado">
+                        </div>
+                        <button type="submit">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        {%endif%}
+        {% if  valor == "igual"%} 
+            <div class='marcador'>
+                <div class='numero'>
+                    <h2>
+                        lo lograste el numero es {{numero}}
+                    </h2>
+                    <form action="/salir" method="GET">
+                        <button type="submit">
+                            Play again
+                        </button>
+                    </form>
+                </div>
+            </div>
+        {% endif %}
+        
+
+    </body>
+</html>
